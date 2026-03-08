@@ -61,7 +61,6 @@ export function NamespaceSelector({
       <PopoverContent className="w-[200px] p-0" align="start">
         <Command>
           <CommandInput placeholder="Search..." className="h-9" />
-          {/* Скрываем скроллбары через произвольные свойства Tailwind */}
           <CommandList className="max-h-[300px] overflow-x-hidden overflow-y-auto [ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {isLoading ? (
               <div className="flex items-center justify-center p-6 text-sm">
@@ -98,7 +97,6 @@ export function NamespaceSelector({
                         className="flex items-center"
                       >
                         <Check className={cn("mr-2 h-4 w-4 shrink-0", selectedNamespace === name ? "opacity-100" : "opacity-0")} />
-                        {/* flex-1 и truncate гарантируют, что текст не вытолкнет контент вправо */}
                         <span className="truncate flex-1 min-w-0" title={name}>
                           {name}
                         </span>
